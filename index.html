@@ -1,29 +1,21 @@
 <!DOCTYPE html>
 <html>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<style>
+input.ng-invalid {
+    background-color:pink;
+}
+input.ng-valid {
+    background-color:lightgreen;
+}
+</style>
 <body ng-app="">
 
-<form>
-  Pick a topic:
-  <input type="radio" ng-model="myVar" value="dogs">Dogs
-  <input type="radio" ng-model="myVar" value="tuts">Tutorials
-  <input type="radio" ng-model="myVar" value="cars">Cars
-</form>
+<p>Try writing in the input field:</p>
 
-<div ng-switch="myVar">
-  <div ng-switch-when="dogs">
-     <h1>Dogs</h1>
-     <p>Welcome to a world of dogs.</p>
-  </div>
-  <div ng-switch-when="tuts">
-     <h1>Tutorials</h1>
-     <p>Learn from examples.</p>
-  </div>
-  <div ng-switch-when="cars">
-     <h1>Cars</h1>
-     <p>Read about cars.</p>
-  </div>
-</div>
+<form name="myForm">
+<input name="myName" ng-model="myName" required>
+</form>
 
 
 </body>
