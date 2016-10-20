@@ -3,17 +3,22 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <body ng-app="myApp">
 
-<adirective></adirective>
+<!--<test-directive></test-directive>-->
+
+<div test-directive></div>
 
 <script>
 var app = angular.module("myApp", []);
-app.directive("adirective", function() {
+app.directive("testDirective", function() {
     return {
-        template : "<h1>Made by a directive!</h1>"+
-        "<h1>Made by a directive with 2 lines!</h1>"
+        restrict : "E",
+        template : "<h1>Made by a directive!</h1>"
     };
 });
 </script>
 
+<p><strong>Note:</strong> By setting the <strong>restrict</strong> property to "A", only the HTML element with the "test-directive" attribute has invoked the directive.</p>
+
 </body>
 </html>
+
