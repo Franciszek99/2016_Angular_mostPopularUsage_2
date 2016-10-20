@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <body>
 
-<div ng-app="" ng-init="myCol='lightblue'">
+<div ng-app="myApp" angamazing></div>
 
-<input style="background-color:{{myCol}}" ng-model="myCol" value="{{myCol}}">
-
-</div>
+<script>
+var app = angular.module("myApp", []);
+app.directive("angamazing", function() {
+    return {
+        template : "<h1>Angular is amazing</h1>"
+    };
+});
+</script>
 
 </body>
 </html>
